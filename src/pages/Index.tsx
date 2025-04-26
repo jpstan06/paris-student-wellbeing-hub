@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { BenefitCard } from '@/components/BenefitCard';
@@ -61,6 +60,10 @@ const Index = () => {
   const [language, setLanguage] = useState<Language>('en');
   const t = content[language];
 
+  const openCalendlyLink = () => {
+    window.open('https://calendly.com/therapist-dimier/30min', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F9F7FE] to-white">
       <header className="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-sm border-b border-gray-100">
@@ -83,7 +86,7 @@ const Index = () => {
               <Button 
                 size="lg"
                 className="bg-[#8E7AB5] hover:bg-[#7B67A3] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
-                onClick={() => window.open('https://calendly.com/your-link', '_blank')}
+                onClick={openCalendlyLink}
               >
                 {t.cta}
               </Button>
@@ -123,7 +126,7 @@ const Index = () => {
           <Button 
             size="lg"
             className="bg-[#8E7AB5] hover:bg-[#7B67A3] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
-            onClick={() => window.open('https://calendly.com/your-link', '_blank')}
+            onClick={openCalendlyLink}
           >
             {t.cta}
           </Button>
@@ -134,4 +137,3 @@ const Index = () => {
 };
 
 export default Index;
-
