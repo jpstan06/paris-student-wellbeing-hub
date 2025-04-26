@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { BenefitCard } from '@/components/BenefitCard';
@@ -9,7 +8,7 @@ type Language = 'en' | 'fr';
 const content = {
   en: {
     intro: "Hi, I'm Therapist Dimier",
-    subIntro: "As a former resident of Cité Internationale, I understand the unique challenges international students face in Paris. Let me help you navigate this journey.",
+    subIntro: "Feeling overwhelmed, stressed, or lonely in Paris? Therapist Dimier offers a safe and confidential space to talk, in both English and French. As a former Cité Internationale resident, he understands the emotional challenges students face when living abroad. Take the first step toward feeling better — your well-being matters.",
     benefitsTitle: "What to Expect in Your Free Session",
     benefits: [
       {
@@ -33,7 +32,7 @@ const content = {
   },
   fr: {
     intro: "Bonjour, je suis Thérapeute Dimier",
-    subIntro: "En tant qu'ancienne résidente de la Cité Internationale, je comprends les défis uniques auxquels font face les étudiants internationaux à Paris. Je suis là pour vous accompagner dans ce parcours.",
+    subIntro: "Vous sentez-vous dépassé, stressé ou seul à Paris ? Thérapeute Dimier vous offre un espace sûr et confidentiel pour parler, en anglais et en français. Ancien résident de la Cité Internationale, il comprend les défis émotionnels auxquels les étudiants font face en vivant à l'étranger. Faites le premier pas vers un mieux-être — votre bien-être compte.",
     benefitsTitle: "Ce Qui Vous Attend Lors de Votre Séance Gratuite",
     benefits: [
       {
