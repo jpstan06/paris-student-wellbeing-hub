@@ -1,12 +1,133 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from 'react';
+import { LanguageToggle } from '@/components/LanguageToggle';
+import { BenefitCard } from '@/components/BenefitCard';
+import { Button } from '@/components/ui/button';
+
+type Language = 'en' | 'fr';
+
+const content = {
+  en: {
+    intro: "Hi, I'm Therapist Dimier",
+    subIntro: "As a former resident of Cité Internationale, I understand the unique challenges international students face in Paris. Let me help you navigate this journey.",
+    benefitsTitle: "What to Expect in Your Free Session",
+    benefits: [
+      {
+        title: "Bilingual Support",
+        description: "Comfortable communication in both English and French",
+      },
+      {
+        title: "Flexible Evening Hours",
+        description: "Sessions that fit around your academic schedule",
+      },
+      {
+        title: "Safe Space",
+        description: "A judgment-free environment to share your concerns",
+      },
+      {
+        title: "Confidential Support",
+        description: "Your privacy and comfort are my top priorities",
+      },
+    ],
+    cta: "Book Your Free 30-Minute Session",
+  },
+  fr: {
+    intro: "Bonjour, je suis Thérapeute Dimier",
+    subIntro: "En tant qu'ancienne résidente de la Cité Internationale, je comprends les défis uniques auxquels font face les étudiants internationaux à Paris. Je suis là pour vous accompagner dans ce parcours.",
+    benefitsTitle: "Ce Qui Vous Attend Lors de Votre Séance Gratuite",
+    benefits: [
+      {
+        title: "Support Bilingue",
+        description: "Communication confortable en anglais et en français",
+      },
+      {
+        title: "Horaires Flexibles",
+        description: "Des séances adaptées à votre emploi du temps",
+      },
+      {
+        title: "Espace Sûr",
+        description: "Un environnement sans jugement pour partager vos préoccupations",
+      },
+      {
+        title: "Support Confidentiel",
+        description: "Votre vie privée et votre confort sont mes priorités",
+      },
+    ],
+    cta: "Réserver Votre Séance Gratuite de 30 Minutes",
+  },
+};
 
 const Index = () => {
+  const [language, setLanguage] = useState<Language>('en');
+  const t = content[language];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-[#F9F7FE] to-white">
+      <header className="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-sm border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-end">
+          <LanguageToggle currentLanguage={language} onLanguageChange={setLanguage} />
+        </div>
+      </header>
+
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                {t.intro}
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                {t.subIntro}
+              </p>
+              <Button 
+                size="lg"
+                className="bg-[#8E7AB5] hover:bg-[#7B67A3] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
+                onClick={() => window.open('https://calendly.com/your-link', '_blank')}
+              >
+                {t.cta}
+              </Button>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="aspect-square bg-gray-100 rounded-3xl overflow-hidden">
+                {/* Placeholder for therapist's photo */}
+                <div className="w-full h-full bg-[#88A6A3]/20 flex items-center justify-center text-[#88A6A3]">
+                  Photo
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="bg-[#F9F7FE]/50 py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+              {t.benefitsTitle}
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {t.benefits.map((benefit, index) => (
+                <BenefitCard
+                  key={index}
+                  title={benefit.title}
+                  description={benefit.description}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA Section */}
+        <section className="max-w-6xl mx-auto px-4 py-16 md:py-24 text-center">
+          <Button 
+            size="lg"
+            className="bg-[#8E7AB5] hover:bg-[#7B67A3] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
+            onClick={() => window.open('https://calendly.com/your-link', '_blank')}
+          >
+            {t.cta}
+          </Button>
+        </section>
+      </main>
     </div>
   );
 };
