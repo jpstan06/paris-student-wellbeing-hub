@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { BenefitCard } from '@/components/BenefitCard';
@@ -89,10 +90,11 @@ const Index = () => {
             </div>
             <div className="order-1 md:order-2">
               <div className="aspect-square bg-gray-100 rounded-3xl overflow-hidden">
-                {/* Placeholder for therapist's photo */}
-                <div className="w-full h-full bg-[#88A6A3]/20 flex items-center justify-center text-[#88A6A3]">
-                  Photo
-                </div>
+                <img 
+                  src="/lovable-uploads/f9567850-baad-4caa-8acc-f581eb538a45.png" 
+                  alt="Therapist Dimier" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -132,3 +134,4 @@ const Index = () => {
 };
 
 export default Index;
+
