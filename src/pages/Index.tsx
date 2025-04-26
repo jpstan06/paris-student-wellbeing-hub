@@ -32,24 +32,24 @@ const content = {
   },
   fr: {
     intro: "Je suis Eloic Dimier",
-    subIntro: "Vous sentez-vous dépassé, stressé ou seul à Paris ? Thérapeute Dimier vous offre un espace sûr et confidentiel pour parler, en anglais et en français. Ancien résident de la Cité Internationale, il comprend les défis émotionnels auxquels les étudiants font face en vivant à l'étranger. Faites le premier pas vers un mieux-être — votre bien-être compte.",
-    benefitsTitle: "Ce Qui Vous Attend Lors de Votre Séance Gratuite",
+    subIntro: "Vous vous sentez dépassé(e), stressé(e) ou seul(e) à Paris ? Je vous propose un espace d'écoute sûr et confidentiel, en français ou en anglais. Ancien résident de la Cité Internationale, je comprends les défis émotionnels auxquels les étudiants peuvent être confrontés loin de leur pays d'origine. Faites le premier pas vers votre mieux-être : votre santé mentale compte.",
+    benefitsTitle: "Ce que vous découvrirez lors de votre séance gratuite",
     benefits: [
       {
-        title: "Support Bilingue",
-        description: "Communication confortable en anglais et en français",
+        title: "Accompagnement bilingue",
+        description: "Parlez librement en anglais ou en français, selon votre préférence",
       },
       {
         title: "Horaires Flexibles",
         description: "Des séances adaptées à votre emploi du temps",
       },
       {
-        title: "Espace Sûr",
-        description: "Un environnement sans jugement pour partager vos préoccupations",
+        title: "Un espace d'écoute sans jugement",
+        description: "Partagez vos préoccupations dans un environnement bienveillant et respectueux",
       },
       {
-        title: "Support Confidentiel",
-        description: "Votre vie privée et votre confort sont mes priorités",
+        title: "Confidentialité totale",
+        description: "Votre vie privée est protégée, tout ce que vous partagez reste strictement confidentiel",
       },
     ],
     cta: "Réserver Votre Séance Gratuite de 30 Minutes",
