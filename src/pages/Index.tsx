@@ -31,7 +31,7 @@ const content = {
     cta: "Book Your Free 30-Minute Session",
   },
   fr: {
-    intro: "Bonjour, je suis Thérapeute Dimier",
+    intro: "Je suis Eloic Dimier",
     subIntro: "Vous sentez-vous dépassé, stressé ou seul à Paris ? Thérapeute Dimier vous offre un espace sûr et confidentiel pour parler, en anglais et en français. Ancien résident de la Cité Internationale, il comprend les défis émotionnels auxquels les étudiants font face en vivant à l'étranger. Faites le premier pas vers un mieux-être — votre bien-être compte.",
     benefitsTitle: "Ce Qui Vous Attend Lors de Votre Séance Gratuite",
     benefits: [
